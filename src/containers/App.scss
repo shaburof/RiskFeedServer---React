@@ -1,0 +1,235 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.header {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo {
+    // width: 70%;
+    height: 8rem;
+}
+
+.header__slogan {
+    color: #55595A;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: unset;
+    margin-top: 1.5rem;
+}
+
+.container {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 80%;
+    // background-color: rgba(129, 9, 185, 0.219);
+    box-sizing: border-box;
+    max-width: 90rem;
+    min-width: 35rem;
+    padding-bottom: 5rem;
+
+    @media screen and (max-width:600px) {
+        width: 100%;
+    }
+}
+
+.form-field {
+    box-sizing: border-box;
+    // margin: .3rem 1rem;
+    padding: .5rem 1rem;
+    // padding: 1rem;
+    // width: 100px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: .5rem .5rem;
+    outline: unset;
+    border: 1px solid rgb(179, 206, 255);
+    border-radius: 3px;
+    font-size: 1.4rem;
+}
+
+.input--disabled {
+    border-color: red;
+}
+
+textarea.input {
+    resize: none;
+}
+
+.input__label {
+    font-size: 1.3rem;
+    padding-left: .5rem;
+    color: rgb(68, 68, 68);
+}
+
+.input-place {
+    position: relative;
+}
+
+.input-place__stringlimit {
+    position: absolute;
+    right: .3rem;
+    bottom: .3rem;
+    font-size: 1rem;
+    color: #55595A;
+}
+
+option {
+    color: rgb(56, 56, 56);
+}
+
+.btn {
+    position: relative;
+    font-size: 1.5rem;
+    padding: .5rem 1.2rem;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+    transition: .1s transform box-shadow;
+
+    &:focus {
+        outline: 0;
+    }
+
+    .btn__spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+}
+
+.btn-green {
+    background-color: rgb(75, 167, 75);
+    color: white;
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    }
+}
+
+
+.btn--disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+.btn--loading {
+    color: transparent;
+
+    &:active {
+        transform: unset;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+    }
+}
+
+$color-form-area:rgb(173, 138, 21);
+
+.form-area {
+    border: solid 1px $color-form-area;
+    border-radius: 3px;
+    margin: .5rem 1rem;
+
+    .form-area__label {
+        font-size: 1.5rem;
+        display: block;
+        text-align: right;
+        padding: .5rem 1rem 2rem 0;
+        color: $color-form-area;
+    }
+}
+
+.color-orange {
+    color: $color-form-area;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+
+    @media screen and (max-width:600px) {
+        flex-direction: column;
+    }
+}
+
+.col-1 {
+    flex-grow: 1;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.col__left {
+    justify-content: flex-start;
+}
+
+.col__right {
+    justify-content: flex-end;
+}
+
+.col__center {
+    justify-content: center;
+}
+
+.react-datepicker {
+    font-size: 1.3rem !important;
+}
+
+.react-datepicker__current-month {
+    font-size: 1.5rem !important;
+}
+
+.react-datepicker__header {
+    padding-top: 6px !important;
+}
+
+.react-datepicker__navigation {
+    top: 13px !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+    margin: 0.5rem !important;
+}
